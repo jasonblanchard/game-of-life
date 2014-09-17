@@ -1,0 +1,26 @@
+{
+  "name": "broccli_app",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Brocfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "broccoli": "~0.12.3",
+    "broccoli-concat": "0.0.11",
+    "broccoli-merge-trees": "~0.1.4",
+    "broccoli-static-compiler": "~0.1.4",
+    "broccoli-es6-transpiler": "~1.0.0",
+    "broccoli-es6-concatenator": "~0.1.7",
+    "broccoli-sass": "~0.2.2",
+    "broccoli-bower": "~0.2.1",
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-aws-s3": "~0.9.1",
+    "grunt-broccoli": "~0.3.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,35 @@
+<!ldoctype html>
+<Mhtml class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+    <link rel="stylesheet" href="/assets/app.css">
+  </head>
+
+  <body>
+    <h1>Conway's Game Of Life</h1>
+
+    <div class='info'>
+      <ul>
+        <li>Generation: <span class='generation'>0</span></li>
+      </ul>
+    </div>
+
+    <table class='life'>
+    </table>
+
+    <button class='start'>start</button>
+
+    <script src='/assets/app.js'></script>
+    <script>
+      var app = require('appkit/app')['default'];
+      app();
+    </script>
+  </body>
+</html>

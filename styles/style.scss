@@ -1,0 +1,30 @@
+body {
+  background: white;
+  font-family: 'Helvetica Neue', 'sans serif';
+  color: rgb(93, 93, 93);
+}
+
+table.life {
+  border: 1px solid black;
+  margin: 0 auto;
+  background: rgb(248, 246, 246);
+  
+
+  td { 
+    width: 10px;
+    height: 10px;
+    padding: 0px;
+
+    &.alive {
+      background: rgb(97, 94, 94);
+    }
+
+  }
+
+}
+
+button.start { 
+  margin: 0 auto;
+  display: block;
+  margin-top: 10px;
+}
