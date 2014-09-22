@@ -36,6 +36,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-aws-s3');
   grunt.loadNpmTasks('grunt-broccoli');
-
-  grunt.registerTask('deploy', ['broccoli:dist:build', 'aws_s3']);
+  
+  grunt.registerTask('build', ['broccoli:dist:build']);
+  grunt.registerTask('deploy', ['build', 'aws_s3']);
 };
