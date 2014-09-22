@@ -7,7 +7,15 @@ export default function() {
 
   $(document).on('click', 'button.start', function(e) {
     e.preventDefault();
-    life.initialize().start();
-    $(this).hide();
+    life.start();
+    $(this).addClass('hide');
+    $('button.stop').removeClass('hide');
+  });
+
+  $(document).on('click', 'button.stop', function(e) {
+    e.preventDefault();
+    life.stop();
+    $(this).addClass('hide');
+    $('button.start').removeClass('hide');
   });
 }

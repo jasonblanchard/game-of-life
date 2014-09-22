@@ -1,7 +1,11 @@
 export default {
 
   start: function() {
-    setInterval(this.tick.bind(this), 100);
+    this.intervalId = setInterval(this.tick.bind(this), 100);
+  },
+  
+  stop: function() {
+    clearInterval(this.intervalId);
   },
 
   props: {

@@ -23,8 +23,20 @@ table.life {
 
 }
 
-button.start { 
+ul {
+  list-style-type: none;
+}
+
+button.start,
+button.stop { 
+  margin-top: 10px;
+}
+
+.center { 
   margin: 0 auto;
   display: block;
-  margin-top: 10px;
+}
+
+.hide {
+  display: none;
 }
