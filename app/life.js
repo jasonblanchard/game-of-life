@@ -40,7 +40,7 @@ export default {
     var defaults = {
       onEachRow: function(x) {},
       onEachCell: function(x, y, value) {}
-    }
+    };
 
     var config = $.extend({},defaults, options);
 
@@ -119,12 +119,12 @@ export default {
   },
 
   inStartingCoords: function(x, y) {
-    var startingAlive = false
+    var startingAlive = false;
     $.each(this.props.startingCoords, function(index, value) {
       if ( (value[0] == x) && (value[1] == y) ) {
         startingAlive = true;
       }
-    })
+    });
 
     return startingAlive;
   },
@@ -140,14 +140,14 @@ export default {
           if (self.rules.underPopulated(neighbors)) {
             this[x][y] = 'd';
           }
-          if (self.rules.equilibrium(neighbors) == true) {
+          if (self.rules.equilibrium(neighbors) === true) {
             this[x][y] = 'a';
           }
-          if (self.rules.overcrowded(neighbors) == true) {
+          if (self.rules.overcrowded(neighbors) === true) {
             this[x][y] = 'd';
           }
         } else {
-          if (self.rules.reproduction(neighbors) == true) {
+          if (self.rules.reproduction(neighbors) === true) {
             this[x][y] = 'a';
           }
         }
@@ -169,7 +169,7 @@ export default {
         }
       });
 
-      if ( aliveNeighbors['length'] < 2 ) {
+      if ( aliveNeighbors.length < 2 ) {
         return true;
       } else {
         return false;
@@ -185,7 +185,7 @@ export default {
         }
       });
 
-      if ( (aliveNeighbors['length'] === 2) || (aliveNeighbors['lengh'] == 3) ) {
+      if ( (aliveNeighbors.length === 2) || (aliveNeighbors.length == 3) ) {
         return true;
       } else {
         return false;
@@ -201,7 +201,7 @@ export default {
         }
       });
 
-      if ( aliveNeighbors['length'] > 3 ) {
+      if ( aliveNeighbors.length > 3 ) {
         return true;
       } else {
         return false;
@@ -218,7 +218,7 @@ export default {
         }
       });
 
-      if (aliveNeighbors['length'] === 3) {
+      if (aliveNeighbors.length === 3) {
         return true;
       } else {
         return false;
