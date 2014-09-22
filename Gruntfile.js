@@ -14,12 +14,12 @@ module.exports = function(grunt) {
         accessKeyId: '<%= aws.AWSAccessKeyId %>',
         secretAccessKey: '<%= aws.AWSSecretKey %>',
         uploadConcurrency: 5,
-        region: 'us-west-2'
+        region: '<%= aws.region %>'
       },
 
       production: {
         options: {
-          bucket: 'jspipeline',
+          bucket: '<%= aws.bucket %>',
         },
         files: [
           {expand: true, cwd: 'dist/', src: ['**'], dest: ''}
@@ -38,12 +38,4 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-broccoli');
 
   grunt.registerTask('deploy', ['broccoli:dist:build', 'aws_s3']);
-
-  grunt.registerTask('default', 'Log default stuff', function() {
-    grunt.log.write("Logging some default stuff...").ok();
-  });
-
-  grunt.registerTask('logStuff', 'Logging some other stuff', function() {
-    grunt.log.write("Logging some other stuff....").ok();
-  });
 };

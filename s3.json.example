@@ -1,0 +1,6 @@
+{
+  "AWSAccessKeyId": "sekret",
+  "AWSSecretKey": "sekret",
+  "region": "us-west-2 [or something]",
+  "bucket": "some-bucket"
+}
